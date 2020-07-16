@@ -1,8 +1,6 @@
 import discord
 
 client = discord.Client()
-guild = 194588301678739456
-me = 563516170938875935
 
 @client.event
 async def on_ready():
@@ -16,4 +14,4 @@ async def on_member_update(before,after):
        await after.edit(nick="[ALL PRIVILEDGES DENIED]",reason="Changed nickname again")
 
 
-client.run('NTYzNTE2MTcwOTM4ODc1OTM1.Xw-RtQ.uY4zExVOnUB40Q_dK6RHJ1eD0nc')
+client.run('Your Token Here')
