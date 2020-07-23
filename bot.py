@@ -11,10 +11,11 @@ async def on_ready():
 async def on_member_update(before,after):
     user = -1
     target = 243194333883400192
-    if after.id == target:  
+    required_nick = "[ALL PRIVILEDGES DENIED]"
+    if after.id == target and after.nick != required_nick:  
+        await after.edit(nick=required_nick,reason="Changed nickname again")
         print("Dunking on user.")
-        await after.edit(nick="[ALL PRIVILEDGES DENIED]",reason="Changed nickname again")
 
-os.environ['ShazBotToken'] = "YOUR_TOKEN_HERE"
+os.environ['ShazBotToken'] = "<token>"
 token = os.environ['ShazBotToken']
 client.run(token)
